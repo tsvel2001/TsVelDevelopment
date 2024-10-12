@@ -53,3 +53,7 @@
 0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:18:41 +0530] "GET /LoginPage/Login.jsp HTTP/1.1" 200 550
 0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:18:50 +0530] "POST /LoginPage/Login HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:18:50 +0530] "GET /LoginPage/LoginSuccess.jsp HTTP/1.1" 200 187
+127.0.0.1 - - [12/Oct/2024:16:21:50 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:21:50 +0530] "GET /LoginPage/Login.jsp HTTP/1.1" 200 550
+0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:21:58 +0530] "POST /LoginPage/Login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Oct/2024:16:21:58 +0530] "GET /LoginPage/LoginSuccess.jsp HTTP/1.1" 200 187
