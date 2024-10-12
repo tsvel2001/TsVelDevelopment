@@ -1,0 +1,11 @@
+package EmployeeLogin;
+
+import org.apache.catalina.User;
+
+public class LoginDao {
+	
+	public boolean insertCreds(User user) {
+		return false;
+	}
+
+}
