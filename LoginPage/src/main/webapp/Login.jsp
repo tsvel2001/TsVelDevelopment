@@ -21,17 +21,15 @@
 <body>
 	<h1 align="center">Employee Login Form</h1>
 	<form action="Login" method="post" onsubmit=" return checkEmptySpace()">
-		<div align="center">
-			<label>UserName: <input type="text" id="userName"
-				name="userName"></label>
-		</div>
+		<div align="center" class="LoginBox">
+			<label>UserName: <input type="text" placeholder="enter user name" id="userName"
+				name="userName" required="required"></label>
 		<br>
-		<div align="center">
-			<label>Password: <input type="text" id="password"
-				name="password"></label>
-		</div>
 		<br>
-		<div align="center">
+			<label>Password: <input type="password" placeholder="**********" id="password"
+				name="password" required="required"></label>
+		<br>
+		<br>
 			<input type="submit" value="login">
 		</div>
 	</form>
