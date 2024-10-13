@@ -2,15 +2,49 @@ package com.organization.orgManagement.model;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 @Component
+@Entity
+@Table(name="employees")
 public class Employees {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="Emp_id")
+	int empId;
+	
+	@Column(name="Emp_name", nullable = true)
 	String employeeName;
+	
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	@Column(name="Location", nullable = true)
 	String location;
+	
+	@Column(name="DOJ", nullable = true)
 	String doj;
+	
+	@Column(name="Designation", nullable = true)
 	String designation;
-	long mobile;
+	
+	@Column(name = "Mobile", nullable = true)
+	Long mobile;
+	
+	@Column(name="User_name")
 	String userName;
+	
+	@Column(name="Password")
 	String password;
 	
 	public Employees() {
@@ -53,7 +87,7 @@ public class Employees {
 		this.designation = designation;
 	}
 	public long getMobile() {
-		return mobile;
+		return (mobile != null ? mobile : 0L);
 	}
 	public void setMobile(long mobile) {
 		this.mobile = mobile;

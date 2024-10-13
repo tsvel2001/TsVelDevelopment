@@ -1,7 +1,10 @@
 package com.organization.orgManagement.controller;
 
+import java.util.List;
+
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +39,18 @@ public class EmployeeController {
 		return this.emp;
 		
 	}
+	
+	@GetMapping("/getAll")
+	public List<Employees> getAllEmployees() {
+		
+		return empService.getAllEmpData();
+		
+	}
+	
+	@DeleteMapping("/delete")
+	public String removeEmployee(@RequestParam("id") int id) {
+		return empService.deleteEmpData(id);
+		}
 	
 	@PostMapping("/add")
 	public String addEmployee(@RequestBody Employees emp) {
